@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="referrer" content="no-referrer">
+  <title>Redirecting…</title>
+  <style>
+    body { font-family: system-ui, sans-serif; text-align: center; padding: 40px; color: #555; }
+  </style>
+</head>
+<body>
+  <p>Redirecting…</p>
+<script>
+  const params = new URL(window.location.href).searchParams;
+  const u = params.get("u");
+  const hash = window.location.hash;
+  if (u) {
+    window.location.replace(decodeURIComponent(u) + hash);
+  }
+</script>
+</body>
+</html>
